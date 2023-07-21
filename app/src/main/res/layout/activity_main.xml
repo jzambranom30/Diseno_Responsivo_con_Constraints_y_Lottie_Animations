@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoprincipal" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/awlogobp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loginbp" />
+
+    <TextView
+        android:id="@+id/twMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cuida tus contraseñas, no las compartas con nadie."
+        android:textAlignment="center"
+        android:textColor="#07215F"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/awlogobp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clyButAct"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/twMessage">
+
+        <ImageButton
+            android:id="@+id/imgButUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_person_outline" />
+
+        <ImageButton
+            android:id="@+id/imgButFaceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imgButUser"
+            app:layout_constraintEnd_toEndOf="@+id/imgButPin"
+            app:layout_constraintStart_toStartOf="@+id/imgButUser"
+            app:srcCompat="@drawable/ic_finger_print" />
+
+        <ImageButton
+            android:id="@+id/imgButPin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#00FFFDFD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_more_horiz" />
+
+        <TextView
+            android:id="@+id/twUser"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Usuario y contraseña"
+            android:textAlignment="center"
+            android:textColor="#07215F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButUser" />
+
+        <TextView
+            android:id="@+id/twFaceId"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text=" Huella / Face ID"
+            android:textAlignment="center"
+            android:textColor="#07215F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/twPin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButFaceId" />
+
+        <TextView
+            android:id="@+id/twPin"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Pin de 6 dígitos"
+            android:textAlignment="center"
+            android:textColor="#07215F"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButPin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clyButContac"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clyButAct">
+
+        <ImageButton
+            android:id="@+id/imgButUb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#00F6F2F2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_location_on" />
+
+        <ImageButton
+            android:id="@+id/imgButClave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imgButUb"
+            app:layout_constraintEnd_toEndOf="@+id/imgButContact"
+            app:layout_constraintStart_toStartOf="@+id/imgButUb"
+            app:srcCompat="@drawable/ic_key" />
+
+        <ImageButton
+            android:id="@+id/imgButContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#00FFFDFD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_call" />
+
+        <TextView
+            android:id="@+id/twUbicacion"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Ubícanos"
+            android:textAlignment="center"
+            android:textColor="#2856C3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButUb" />
+
+        <TextView
+            android:id="@+id/twClaveDigital"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Clave Digital"
+            android:textAlignment="center"
+            android:textColor="#2856C3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/twContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButClave" />
+
+        <TextView
+            android:id="@+id/twContact"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Llámanos"
+            android:textAlignment="center"
+            android:textColor="#2856C3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgButContact" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/twOtroUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="¿Ingresar con otro usuario?"
+        android:textAlignment="center"
+        android:textColor="#2856C3"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clyButContac" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
